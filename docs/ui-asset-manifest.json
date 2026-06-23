@@ -1,0 +1,30 @@
+{
+  "generated_this_run": 3,
+  "provider": "Codex built-in image_gen",
+  "assets": [
+    {
+      "category": "background",
+      "path": "public/images/ui/idea-workbench.png",
+      "generated": true,
+      "integrated": true
+    },
+    {
+      "category": "control-skin",
+      "path": "public/images/ui/idea-control-skin.png",
+      "generated": true,
+      "integrated": true
+    },
+    {
+      "category": "motif",
+      "path": "public/images/ui/idea-motif.png",
+      "generated": true,
+      "integrated": true
+    },
+    {
+      "category": "deployment-handoff",
+      "path": "public/images/ui/idea-motif.png",
+      "generated": true,
+      "integrated": true
+    }
+  ]
+}
