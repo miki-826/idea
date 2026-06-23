@@ -134,7 +134,7 @@ const handoffItems = [
   {
     icon: Rocket,
     title: "Vercel Import",
-    detail: "GitHub repoをImportし、環境変数を入れた後にRedeployする。",
+    detail: "AI_PROVIDERとOPENAI_API_KEYを含む環境変数を入れた後にRedeployする。",
   },
   {
     icon: Database,

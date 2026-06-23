@@ -15,7 +15,7 @@
 
 - No API key required for one complete play.
 - Inputs autosave to LocalStorage.
-- Gemini timeout or error returns Mock spec.
+- OpenAI/Gemini timeout or error returns Mock spec.
 - Supabase missing still saves locally.
 - GitHub URL missing is represented as an explicit handoff item, not guessed.
 

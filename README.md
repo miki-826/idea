@@ -16,13 +16,16 @@ Open http://127.0.0.1:3000.
 Copy `.env.example` to `.env.local` when using live services.
 
 ```bash
+AI_PROVIDER=openai
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4o-mini
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-2.5-flash
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
-No environment variables are required for Mock Mode. Gemini and Supabase failures fall back to local Mock/LocalStorage behavior.
+No environment variables are required for Mock Mode. OpenAI, Gemini, and Supabase failures fall back to local Mock/LocalStorage behavior. Set `AI_PROVIDER=openai` to use an OpenAI / ChatGPT API key, or `AI_PROVIDER=gemini` to use Gemini.
 
 ## Deploy
 

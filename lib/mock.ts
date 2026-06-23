@@ -2,6 +2,7 @@ import type { Category, Purpose } from "@/lib/types";
 
 export const HAS_AI_KEY = !!process.env.OPENAI_API_KEY;
 export const HAS_GEMINI_KEY = !!process.env.GEMINI_API_KEY;
+export const AI_PROVIDER = process.env.AI_PROVIDER;
 
 export function buildMockSpec(input: {
   category: Category;

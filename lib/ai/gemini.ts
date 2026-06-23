@@ -1,41 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import { buildMockSpec } from "@/lib/mock";
-import type { Category, Purpose } from "@/lib/types";
-
-type AnalyzePayload = {
-  category: Category;
-  purpose: Purpose;
-  entries: { label: string; content: string; type: string }[];
-  questions: { id: string; prompt: string; answer: string }[];
-};
-
-const responseSchema = {
-  type: "object",
-  required: [
-    "title",
-    "oneLine",
-    "users",
-    "problem",
-    "core",
-    "features",
-    "visual",
-    "tech",
-    "unknown",
-    "inferred",
-  ],
-  properties: {
-    title: { type: "string" },
-    oneLine: { type: "string" },
-    users: { type: "string" },
-    problem: { type: "string" },
-    core: { type: "string" },
-    features: { type: "array", items: { type: "string" } },
-    visual: { type: "string" },
-    tech: { type: "array", items: { type: "string" } },
-    unknown: { type: "array", items: { type: "string" } },
-    inferred: { type: "array", items: { type: "string" } },
-  },
-};
+import { ideaSpecJsonSchema, type AnalyzePayload } from "@/lib/ai/types";
 
 export async function analyzeWithGemini(payload: AnalyzePayload) {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -57,7 +22,7 @@ export async function analyzeWithGemini(payload: AnalyzePayload) {
     contents: prompt,
     config: {
       responseMimeType: "application/json",
-      responseSchema,
+      responseSchema: ideaSpecJsonSchema,
     },
   });
 

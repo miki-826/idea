@@ -10,6 +10,9 @@
 
 1. Import the confirmed GitHub repository in Vercel.
 2. Set environment variables:
+   - `AI_PROVIDER=openai`
+   - `OPENAI_API_KEY`
+   - `OPENAI_MODEL` if overriding the default
    - `GEMINI_API_KEY`
    - `GEMINI_MODEL` if overriding the default
    - `NEXT_PUBLIC_SUPABASE_URL`
